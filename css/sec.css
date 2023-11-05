@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    background: linear-gradient(rgb(191, 191, 252),rgb(118, 50, 180),
+    rgb(233, 93, 117),rgb(138, 12, 12),rgb(33, 33, 78));
+    background-size: cover;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+ul:hover li a{
+    opacity: 0;
+
+}
+ul li a{
+    text-decoration: none;
+     color: rgb(252, 252, 252);
+  padding: 20px;
+     background-color: rgb(150, 79, 218);
+     border-radius: 30px;
+     display: inline-block;
+     transition: .5s;
+     width: 200px;
+     font-size: 20px;
+     font-weight: 600;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     
+}
+ul li{
+    margin: 60px;
+  position: relative;
+}
+ul li a:hover {
+    background: linear-gradient( rgb(165, 42, 144),rgb(0, 217, 255),green);
+  transform: scale(1.5);
+  opacity: 1;
+}
+ul li::after{
+    content: attr(data-text);
+    color:rgb(237, 250, 237);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    letter-spacing: 50px;
+    transition: .5s;
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+/* ul::before{ 
+  content: '';
+  background-color: purple;
+  border-radius: 50px;
+  width: 180px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%,90%);
+  opacity: 1;}
+  
